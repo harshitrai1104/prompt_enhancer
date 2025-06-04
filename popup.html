@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prompt Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <div class="logo">🎯</div>
+      <h1>Prompt Analyzer</h1>
+      <div class="subtitle">Analyze & Enhance Your AI Prompts</div>
+    </div>
+    
+    <div class="input-section">
+      <label class="input-label" for="prompt-input">Enter your prompt:</label>
+      <textarea id="prompt-input" placeholder="Type your AI prompt here and click analyze to get suggestions..."></textarea>
+      <button id="analyze-btn">Analyze Prompt</button>
+    </div>
+    
+    <div class="results-section">
+      <div id="results" class="hidden">
+        <div class="score-display">
+          <div id="score-circle" class="score-circle">
+            <span id="score-text">0</span>
+          </div>
+          <div>Prompt Score</div>
+        </div>
+        
+        <div class="analysis-section">
+          <div class="section-title">
+            <span class="icon">✓</span>
+            Strengths
+          </div>
+          <div class="section-content">
+            <ul id="strengths-list"></ul>
+          </div>
+        </div>
+        
+        <div class="analysis-section">
+          <div class="section-title">
+            <span class="icon">⚠</span>
+            Issues
+          </div>
+          <div class="section-content">
+            <ul id="issues-list"></ul>
+          </div>
+        </div>
+        
+        <div class="analysis-section">
+          <div class="section-title">
+            <span class="icon">💡</span>
+            Suggestions
+          </div>
+          <div class="section-content">
+            <ul id="suggestions-list"></ul>
+          </div>
+        </div>
+        
+        <div class="enhanced-prompt">
+          <div class="enhanced-title">✨ Enhanced Prompt</div>
+          <div id="enhanced-text" class="enhanced-text"></div>
+          <button id="copy-enhanced" class="copy-btn">Copy Enhanced Prompt</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="popup.js"></script>
+  <script type="module" src="content.js"></script>
+</body>
+</html>
